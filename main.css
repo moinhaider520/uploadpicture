@@ -1,0 +1,94 @@
+html {
+    overflow-y: scroll;
+  }  
+  
+  
+  audio {
+    max-width: 100%;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 1em;
+    word-break: break-word;
+  }
+  
+
+  
+  #container {
+    margin: 0 auto 0 auto;
+    max-width: 600px;
+    padding: 1em 1.5em 1.3em 1.5em;
+  }
+  #text-input
+  {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    font-size: 14px;
+    margin-top: 20%;
+  }
+  #video
+  {
+    width: 220px;
+    height: 240px;
+    margin: auto;
+  }
+  #take-picture
+  {
+    margin-left: 28%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+  }
+  #upload-picture
+  {    
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+  }
+  #submit-info
+  {    
+    margin-left: 38%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+  }
+  #take-picture:hover{
+    cursor: pointer;
+  }
+  
+  h1 {
+    border-bottom: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 0 0 0.8em 0;
+    padding: 0 0 0.2em 0;
+  }
+
+  
+  @media screen and (max-width: 650px) { 
+    h1 {
+      font-size: 24px;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    h1 {
+      font-size: 22px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    h1 {
+      font-size: 20px;
+    }
+  }
