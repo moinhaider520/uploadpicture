@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <base target="_blank">
+
+    <title>Upload Picture</title>
+
+    <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        div.select {
+            display: inline-block;
+            margin: 0 0 1em 0;
+        }
+
+        p.small {
+            font-size: 0.7em;
+        }
+
+        label {
+            width: 12em;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="container">
+    <div>
+        <input id="text-input" type="text" placeholder="Enter Your Text" />
+    </div>
+    <div class="select">
+        <label for="audioSource">Audio input source: </label><select id="audioSource"></select>
+    </div>
+
+    <div class="select">
+        <label for="audioOutput">Audio output destination: </label><select id="audioOutput"></select>
+    </div>
+
+    <div class="select">
+        <label for="videoSource">Video source: </label><select id="videoSource"></select>
+    </div>
+    <br />
+    <span>
+    <video id="video" playsinline autoplay></video><canvas style="margin-left: 50px;position:relative;top:-30px;" id="canvas" width="220" height="180"></canvas>
+    </span>
+    <span>
+    <button id="take-picture">Take Picture</button>
+    <button id="upload-picture">Upload Picture</button>
+    </span><br /><br />
+    <button id="submit-info">Upload Picture</button>
+</div>
+
+<script src="js/main.js" async></script>
+</body>
+<script>
+  const player = document.getElementById('video');
+  const canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+  const captureButton = document.getElementById('take-picture');
+
+  const constraints = {
+    video: true,
+  };
+
+  captureButton.addEventListener('click', () => {
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, canvas.width, canvas.height);
+  });
+
+  // Attach the video stream to the video element and autoplay.
+  
+  
+</script>
+</html>
